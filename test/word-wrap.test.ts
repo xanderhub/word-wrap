@@ -15,4 +15,14 @@ describe('word-wrap tests', () => {
         const wrappedText = wrapText('abcde', 3);
         expect(wrappedText).toBe('abc\nde');
     });
+
+    it('handles input with whitespaces', () => {
+        const wrappedText = wrapText('ab cde f hijkl', 3);
+        expect(wrappedText).toBe('ab\ncde\nf\nhij\nkl');
+    });
+
+    // it('handles multiple', () => {
+    //     const wrappedText = wrapText('n o n o n o', 3);
+    //     expect(wrappedText).toBe('n o\nn o\nn o');
+    // });
 });
