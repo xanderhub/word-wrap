@@ -10,4 +10,9 @@ describe('word-wrap tests', () => {
         const wrappedText = wrapText('abc', 5);
         expect(wrappedText).toBe('abc');
     });
+
+    it('handles input without whitespaces', () => {
+        const wrappedText = wrapText('abcde', 3);
+        expect(wrappedText).toBe('abc\nde');
+    });
 });
