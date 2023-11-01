@@ -21,8 +21,8 @@ describe('word-wrap tests', () => {
         expect(wrappedText).toBe('ab\ncde\nf\nhij\nkl');
     });
 
-    // it('handles multiple', () => {
-    //     const wrappedText = wrapText('n o n o n o', 3);
-    //     expect(wrappedText).toBe('n o\nn o\nn o');
-    // });
+    it('handles input with multiple whitespaces in line', () => {
+        const wrappedText = wrapText('ab cd e f j h', 5);
+        expect(wrappedText).toBe('ab cd\ne f j\nh');
+    });
 });
