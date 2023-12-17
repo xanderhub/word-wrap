@@ -16,7 +16,7 @@ export function wrapText(text: string, width: number): string {
         }
     }
 
-    return result + text.substring(index).trim();
+    return result + text.substring(index);
 }
 
 function moveIndex(text: string, index: number, offset: number): number {
